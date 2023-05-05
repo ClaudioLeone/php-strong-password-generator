@@ -27,7 +27,7 @@
                 <label for="text">Lunghezza pwd da generare:</label>
 
                 <div class="inputs flex f-align-center f-justify-between">
-                    <input type="text" name="text" id="text">
+                    <input type="text" name="text" id="text" placeholder="Digita una cifra">
                     <input class="btn-reset" type="reset" value="❌">
                 </div>
             </form>
