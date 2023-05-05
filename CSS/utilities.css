@@ -1,0 +1,34 @@
+/* Variables */
+:root {
+    --containers-wdt: 90%;
+}
+/* ///////// */
+
+.flex {
+    display: flex;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.f-align-center {
+    align-items: center;
+}
+
+.f-justify-start {
+    justify-content: start;
+}
+
+.f-justify-end {
+    justify-content: end;
+}
+
+.f-justify-between {
+    justify-content: space-between;
+}
+
+.f-justify-evenly {
+    justify-content: space-evenly;
+}
+
