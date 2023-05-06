@@ -1,5 +1,13 @@
 <?php
-    
+    $dev_input = 0;
+    function is_set($input)
+    {
+        if (isset($input)) 
+        {
+            $input = $_GET["text"];
+            var_dump($input);
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +39,21 @@
                     <input class="btn-reset" type="reset" value="❌">
                 </div>
             </form>
+
+            <div class="usr-choice-container flex f-align-center f-justify-center">
+                <div class="user-choice">
+                    <?php 
+                        if (isset($_GET["text"]) && is_numeric($_GET["text"]))
+                        {
+                            is_set($dev_input);
+                        }
+                        elseif (!is_numeric($_GET["text"])) 
+                        { 
+                            ?> <h3 class="choice"><?php echo "Not a number!" ?></h3> <?php
+                        }
+                    ?>
+                </div>
+            </div>
         </div>
     </main>
 </body>
