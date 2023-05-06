@@ -19,7 +19,7 @@
 
     <main>
         <div class="form-container flex f-col f-justify-between">
-            <form class="form-primary flex f-justify-between" action="partials//pwd_showpage.php" method="post">
+            <form class="form-primary flex f-justify-between" action="partials/pwd_showpage.php" method="post">
                 <label for="text">Lunghezza pwd da generare:</label>
 
                 <div class="inputs flex f-align-center f-justify-between">

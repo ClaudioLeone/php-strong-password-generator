@@ -1,5 +1,7 @@
 <?php
     include __DIR__ . '/functions.php';
+    session_start();
+    $_SESSION["user_text"] = $_POST["text"]
 ?>
 
 <!DOCTYPE html>
@@ -15,19 +17,24 @@
 <body>
     <div class="user-choice-container flex f-align-center f-justify-center">
         <div class="user-choice">
-            <h4>Your generated password, according to your length of choice, is:</h4>
-            <div class="pwd-container">
+            <div class="pwd-container flex f-col f-align-center">
                 <?php 
-                    if (isset($_POST["text"]) && is_numeric($_POST["text"]))
-                    {
-                        is_set($dev_input, $pwd_chars);
+                    if (isset($_SESSION["user_text"]) && is_numeric($_SESSION["user_text"]))
+                    {?>
+                        <h4>Your generated password, according to your length of choice, is:</h4>
+                        <h3 class="choice"><?php is_set($dev_input, $pwd_chars); ?></h3>
+                    <?php 
                     }
-                    elseif (!is_numeric($_POST["text"])) 
+                    elseif (!is_numeric($_SESSION["user_text"])) 
                     { 
-                        ?> <h3 class="choice"><?php echo "Not a number!" ?></h3> <?php
+                        ?> <h3 class="wrong-choice"><?php echo "Not a number!" ?></h3> <?php
                     }
                 ?>
             </div>
+
+            <form class="form-secondary flex f-justify-center" action="../index.php" method="post">
+                <button class="goback-btn" type="submit">INDIETRO</button>
+            </form>
         </div>
     </div>
 </body>
