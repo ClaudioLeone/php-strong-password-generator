@@ -1,5 +1,7 @@
 <?php
     $dev_input = 0;
+    $pwd_chars = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ|\!£$%&/'*#@=?^";
+
     function is_set($input)
     {
         if (isset($input)) 
