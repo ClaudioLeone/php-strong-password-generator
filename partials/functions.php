@@ -6,7 +6,7 @@
     {
         if (isset($input)) 
         {
-            $input = $_GET["text"];
+            $input = $_POST["text"];
             $alphabet_pwd = str_split($alphabet_pwd, 1);
 
             for ($i = 0; $i < $input; $i++) {

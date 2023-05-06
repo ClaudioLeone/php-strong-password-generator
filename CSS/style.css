@@ -77,13 +77,34 @@ label {
 
 .btn-refresh:hover {
     background-color: #d1cfff;
+
+}
+
+.user-choice-container {
+    height: 100vh;
 }
 
 .user-choice {
-    padding-bottom: 20px;
+    padding: 150px 75px;
+    width: 600px;
+    text-align: center;
+    background-color: #ffefdc;
+    color: #ed1943;
+}
+
+.user-choice > h4 {
+    color: #0e0e0e;
 }
 
 .choice {
     font-size: 1.5rem;
     color: #ed1943;
+}
+
+.pwd-container {
+    margin: 20px 10px;
+    padding: 50px 0;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: #fae6e6;
 }

@@ -1,8 +1,3 @@
-<?php
-    include __DIR__ . '/partials/functions.php';
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +19,7 @@
 
     <main>
         <div class="form-container flex f-col f-justify-between">
-            <form class="form-primary flex f-justify-between" action="" method="get">
+            <form class="form-primary flex f-justify-between" action="partials//pwd_showpage.php" method="post">
                 <label for="text">Lunghezza pwd da generare:</label>
 
                 <div class="inputs flex f-align-center f-justify-between">
@@ -32,21 +27,6 @@
                     <input class="btn-reset" type="reset" value="❌">
                 </div>
             </form>
-
-            <div class="usr-choice-container flex f-align-center f-justify-center">
-                <div class="user-choice">
-                    <?php 
-                        if (isset($_GET["text"]) && is_numeric($_GET["text"]))
-                        {
-                            is_set($dev_input, $pwd_chars);
-                        }
-                        elseif (!is_numeric($_GET["text"])) 
-                        { 
-                            ?> <h3 class="choice"><?php echo "Not a number!" ?></h3> <?php
-                        }
-                    ?>
-                </div>
-            </div>
         </div>
     </main>
 </body>
