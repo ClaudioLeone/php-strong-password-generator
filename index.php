@@ -1,13 +1,19 @@
 <?php
     $dev_input = 0;
-    $pwd_chars = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ|\!£$%&/'*#@=?^";
+    $pwd_chars = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ|\!$%&/'*#@=?^";
 
-    function is_set($input)
+
+    function is_set($input, $alphabet_pwd)
     {
         if (isset($input)) 
         {
             $input = $_GET["text"];
-            var_dump($input);
+            $alphabet_pwd = str_split($alphabet_pwd, 1);
+
+            for ($i = 0; $i < $input; $i++) {
+                $single_char = $alphabet_pwd[array_rand($alphabet_pwd)];
+                var_dump($single_char);
+            }
         }
     }
 ?>
@@ -47,7 +53,7 @@
                     <?php 
                         if (isset($_GET["text"]) && is_numeric($_GET["text"]))
                         {
-                            is_set($dev_input);
+                            is_set($dev_input, $pwd_chars);
                         }
                         elseif (!is_numeric($_GET["text"])) 
                         { 
