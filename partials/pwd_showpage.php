@@ -1,7 +1,13 @@
 <?php
     include __DIR__ . '/functions.php';
     session_start();
-    $_SESSION["user_text"] = $_POST["text"]
+    
+    if (isset($_POST["text"])) {
+        $_SESSION["user_text"] = $_POST["text"];
+    }
+
+    $input_min = 7;
+    $input_max = 15;
 ?>
 
 <!DOCTYPE html>
@@ -20,14 +26,26 @@
             <div class="pwd-container flex f-col f-align-center">
                 <?php 
                     if (isset($_SESSION["user_text"]) && is_numeric($_SESSION["user_text"]))
-                    {?>
-                        <h4>Your generated password, according to your length of choice, is:</h4>
-                        <h3 class="choice"><?php is_set($dev_input, $pwd_chars); ?></h3>
-                    <?php 
+                    {   
+                        if ($_SESSION["user_text"] < $input_min || $_SESSION["user_text"] > $input_max)
+                        {
+                            ?> <h3 class="wrong-choice"><?php echo "Il valore selezionato non rispetta le limitazioni! Riprovare" ?></h3> <?php
+                        }
+                        else
+                        {?>
+                            <h4>La tua password di <?php echo $_SESSION["user_text"] ?> caratteri è:</h4>
+                            <h3 class="choice"><?php is_set($dev_input, $pwd_chars, 7, 15); ?></h3>
+
+                            <div class="note-container">
+                                <h6 class="bottom_note">*Nota: premi F5 per generare una nuova password*</h6>
+                                <h5 class="bottom_note">***ATTENZIONE: così facendo perderai l'attuale password!***</h5>
+                            </div>
+                        <?php 
+                        }
                     }
                     elseif (!is_numeric($_SESSION["user_text"])) 
                     { 
-                        ?> <h3 class="wrong-choice"><?php echo "Not a number!" ?></h3> <?php
+                        ?> <h3 class="wrong-choice"><?php echo "Non è stato inserito un valore idoneo! Riprovare" ?></h3> <?php
                     }
                 ?>
             </div>

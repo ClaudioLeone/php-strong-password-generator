@@ -24,7 +24,7 @@ label {
 
 #text {
     height: 100%;
-    width: 150px;
+    width: 220px;
     border: 1px solid grey;
     border-radius: 3px;
     background-color: #fff7ed;
@@ -48,16 +48,15 @@ label {
 
 .form-primary {
     padding: 20px;
-    width: 80%;
+    width: 90%;
 }
 
 .form-secondary {
     padding: 20px;
-    /* width: 100%; */
 }
 
 .inputs {
-    width: 180px;
+    width: 250px;
 }
 
 .btn-reset {
@@ -90,11 +89,11 @@ label {
 }
 
 .user-choice {
-    border-radius: 25px;
-    padding: 80px 75px;
+    border-radius: 10px;
+    padding: 35px 75px;
     text-align: center;
     background-color: #cccad6;
-    color: #ed1943;
+    color: #00de4e;
 }
 
 .pwd-container > h4 {
@@ -115,9 +114,9 @@ label {
 
 .pwd-container {
     margin: 20px 10px;
-    padding: 50px 25px;
+    padding: 40px 45px;
     border: 1px solid grey;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: #fae6e6;
     cursor: pointer;
 }
@@ -126,6 +125,14 @@ label {
     border: 1px solid grey;
     border-radius: 5px;
     padding: 5px 15px;
-    background-color: #b3b3ff;
+    background-color: #b58aff;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.bottom_note {
+    margin-top: 30px;
+    font-style: italic;
+    color: #ed1943;
 }

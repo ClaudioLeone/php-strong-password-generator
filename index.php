@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Strong PWD Generator</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/utilities.css">
 </head>
@@ -23,7 +23,7 @@
                 <label for="text">Lunghezza pwd da generare:</label>
 
                 <div class="inputs flex f-align-center f-justify-between">
-                    <input type="text" name="text" id="text" placeholder="Digita una cifra">
+                    <input type="text" name="text" id="text" placeholder="Digita una cifra (min 7, max 15)">
                     <input class="btn-reset" type="reset" value="❌">
                 </div>
             </form>
